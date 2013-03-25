@@ -56,6 +56,12 @@ public class Drop {
 	@JsonProperty("rivers")
 	private List<Long> riverIds;
 	
+	@JsonProperty("buckets")
+	private List<Long> bucketIds;
+	
+	@JsonProperty("mark_as_read")
+	private List<Long> markAsRead;
+	
 	public String getTitle() {
 		return title;
 	}
@@ -158,6 +164,22 @@ public class Drop {
 
 	public void setRiverIds(List<Long> riverIds) {
 		this.riverIds = riverIds;
+	}
+
+	public List<Long> getBucketIds() {
+		return bucketIds;
+	}
+
+	public void setBucketIds(List<Long> bucketIds) {
+		this.bucketIds = bucketIds;
+	}
+
+	public List<Long> getMarkAsRead() {
+		return markAsRead;
+	}
+
+	public void setMarkAsRead(List<Long> markAsRead) {
+		this.markAsRead = markAsRead;
 	}
 
 	public static class Identity {
