@@ -35,8 +35,6 @@ public class DropsService extends AbstractService {
 	}
 
 	public List<Drop> createDrops(List<Drop> drops) throws IOException {
-		String json = new String(objectMapper.writeValueAsBytes(drops));
-		System.out.println("JSON = " + json);
 		HttpResponse response = post(
 				"http://localhost:8080/swiftriver-api/v1/drops",
 				new ByteArrayContent("application/json", objectMapper
