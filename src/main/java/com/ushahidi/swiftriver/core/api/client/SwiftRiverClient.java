@@ -90,7 +90,7 @@ public class SwiftRiverClient {
 		try {
 			return dropsService.createDrops(this.dropPostUrl, drops);
 		} catch (IOException e) {
-			
+			e.printStackTrace();
 		}
 		return null;
 	}
