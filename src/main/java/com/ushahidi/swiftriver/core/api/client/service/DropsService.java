@@ -48,7 +48,7 @@ public class DropsService extends AbstractService {
 	@SuppressWarnings("unchecked")
 	public List<Drop> createDrops(String postURL, List<Drop> drops) throws IOException {
 		HttpResponse response = post(postURL,
-				new ByteArrayContent("application/json", objectMapper
+				new ByteArrayContent("application/json;charset=UTF-8", objectMapper
 						.writeValueAsBytes(drops)));
 
 		return response.parseAs(drops.getClass());
